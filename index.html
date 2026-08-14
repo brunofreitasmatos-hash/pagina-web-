@@ -3,137 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W Air Max 95 | Estilo & Conforto</title>
+    <title>Nike Air Max Icons | 95, TN & 97</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f7;
-            color: #111;
-        }
-
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
+        /* Ajustes extras específicos para a grade de 3 produtos */
+        .catalog-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
-            align-items: center;
+            max-width: 1200px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
         }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .product-image {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        
+        .hero-title {
             text-align: center;
-        }
-
-        .product-image img {
-            max-width: 100%;
-            height: auto;
-            transform: rotate(-15deg);
-            transition: transform 0.3s;
-        }
-
-        .product-image:hover img {
-            transform: rotate(0deg) scale(1.05);
-        }
-
-        .product-details h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-top: 140px;
+            font-size: 3rem;
+            font-weight: 900;
             text-transform: uppercase;
+            letter-spacing: -1px;
         }
 
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
+        .hero-title span {
+            color: var(--accent-color);
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1px solid #222;
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .img-container {
+            background: radial-gradient(circle, #222 0%, #151518 70%);
+            border-radius: 16px;
+            padding: 20px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .price {
-            font-size: 1.8rem;
-            font-weight: bold;
+        .img-container img {
+            max-width: 90%;
+            height: auto;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .img-container img {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        .tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--accent-color);
             color: #000;
-            margin-bottom: 20px;
-        }
-
-        .description {
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 30px;
-        }
-
-        .btn-buy {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 15px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: background 0.3s;
-        }
-
-        .btn-buy:hover {
-            background-color: #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #888;
-            font-size: 0.9rem;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 20px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
     <header>
-        NIKE AIR MAX
+        <h2>NIKE AIR <span>MAX ICONS</span></h2>
     </header>
 
-    <main class="container">
-        <div class="product-image">
-            <!-- Substitua o link abaixo pela imagem real do seu Air Max 95 -->
-            <img src="https://unsplash.com" alt="W Air Max 95">
+    <h1 class="hero-title">A Trindade das <span>Ruas</span></h1>
+
+    <main class="catalog-grid">
+        
+        <!-- CARD 1: AIR MAX 95 -->
+        <div class="product-card">
+            <div>
+                <div class="img-container">
+                    <span class="tag">1995</span>
+                    <!-- Imagem temporária representativa -->
+                    <img src="https://unsplash.com" alt="Air Max 95">
+                </div>
+                <h2>Air Max 95</h2>
+                <div class="subtitle">Anatomia Humana</div>
+                <p class="description">
+                    Inspirado na estrutura do corpo humano, onde a entressola representa a coluna vertebral e os painéis graduados simulam os músculos e costelas. Foi o primeiro a trazer o amortecimento Air visível também no antepé.
+                </p>
+            </div>
+            <div>
+                <div class="price">R$ 1.299,99</div>
+                <a href="#" class="btn-buy" style="width: 100%; text-align: center;">Garantir o Meu</a>
+            </div>
         </div>
 
-        <div class="product-details">
-            <h1>W Air Max 95</h1>
-            <div class="subtitle">Sneaker Feminino / Casual e Corrida</div>
-            <div class="price">R$ 1.199,99</div>
-            <p class="description">
-                Inspirado no corpo humano e na estética dos anos 90, o **Nike Air Max 95** combina um conforto inacreditável com um estilo que chama a atenção. As painéis laterais ondulados representam os músculos, enquanto o amortecimento Air visível no calcanhar e no antepé garante uma passada suave o dia todo.
-            </p>
-            <a href="#" class="btn-buy">Comprar Agora</a>
+        <!-- CARD 2: AIR MAX TN (PLUS) -->
+        <div class="product-card">
+            <div>
+                <div class="img-container">
+                    <span class="tag">1998</span>
+                    <img src="https://unsplash.com" alt="Air Max TN">
+                </div>
+                <h2>Air Max Plus (TN)</h2>
+                <div class="subtitle">Tuned Air / Visual Praiano</div>
+                <p class="description">
+                    Nascido nas praias da Flórida, suas linhas representam palmeiras ao vento e a cauda de uma baleia. Introduziu a tecnologia Tuned Air, tornando-se o rei absoluto do streetwear europeu e das subculturas urbanas.
+                </p>
+            </div>
+            <div>
+                <div class="price">R$ 1.399,99</div>
+                <a href="#" class="btn-buy" style="width: 100%; text-align: center;">Garantir o Meu</a>
+            </div>
         </div>
+
+        <!-- CARD 3: AIR MAX 97 -->
+        <div class="product-card">
+            <div>
+                <div class="img-container">
+                    <span class="tag">1997</span>
+                    <img src="https://unsplash.com" alt="Air Max 97">
+                </div>
+                <h2>Air Max 97</h2>
+                <div class="subtitle">Trem-Bala Japonês</div>
+                <p class="description">
+                    Inspirado nos trens de alta velocidade do Japão e nas ondulações da água caindo em uma gota. Marcou a história como o primeiro tênis a apresentar uma cápsula de ar que se estendia por toda a sola do pé.
+                </p>
+            </div>
+            <div>
+                <div class="price">R$ 1.349,99</div>
+                <a href="#" class="btn-buy" style="width: 100%; text-align: center;">Garantir o Meu</a>
+            </div>
+        </div>
+
     </main>
 
     <footer>
-        &copy; 2026 Loja de Air Max. Desenvolvido para GitHub Pages.
+        &copy; 2026 Coleção Air Max Heritage. Hospedado no GitHub Pages.
     </footer>
 
 </body>
